@@ -162,7 +162,7 @@ const Hero = () => {
              <div className="p-12 text-center text-white z-10">
                 {/* Remplacement de l'icône Users par le logo 3E fourni */}
                 <img 
-                  src="/logo3E.png"
+                  src="logo3E.png"
                   alt="Logo Opération 3E" 
                   className="mx-auto mb-6 h-32 w-auto opacity-80" 
                 />
