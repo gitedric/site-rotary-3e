@@ -45,7 +45,7 @@ const Navigation = () => {
             <div className="flex items-center justify-center">
               {/* Utilisation d'une URL publique fiable pour le logo Rotary */}
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Rotary_International_Logo.svg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/4/44/Rotary_International_Logo.svg" 
                 alt="Logo Roue Rotary" 
                 className="h-16 w-auto" 
               />
