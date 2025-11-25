@@ -16,13 +16,6 @@ const RotaryTheme = {
 
 // --- COMPOSANT : GUIDE INTERVENANT ---
 const AuditorGuide = ({ onBack }) => {
-  // Fonction pour simuler le téléchargement dans cet environnement de démo
-  const handleDownload = (e) => {
-    e.preventDefault();
-    alert("Sur votre site réel (GitHub Pages), ce bouton téléchargera 'Guide_intervenant.pdf'. Ici, c'est une démo !");
-    // Pour la version finale, supprimez ce onClick et utilisez simplement href="Guide_intervenant.pdf"
-  };
-
   return (
     <div className="bg-gray-50 min-h-screen pb-20 animate-in fade-in duration-500">
       {/* Header du Guide */}
@@ -47,10 +40,11 @@ const AuditorGuide = ({ onBack }) => {
               <p className="text-gray-600 text-lg">Pour les auditeurs - Édition 2026</p>
             </div>
             
-            {/* NOTE: Sur votre site réel, remplacez le onClick par href="Guide_intervenant.pdf" */}
             <a 
-              href="#"
-              onClick={handleDownload}
+              href="Guide_intervenant.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
               className={`flex items-center gap-2 ${RotaryTheme.gold} text-[#00246c] font-bold uppercase px-6 py-3 rounded-sm shadow hover:opacity-90 transition-all`}
             >
               <Download size={20} /> Télécharger le PDF
