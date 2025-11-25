@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Calendar, MapPin, Clock, User, Users, FileText, CheckCircle, 
   Briefcase, Globe, Menu, X, Award, Info, Mail, ArrowRight, 
@@ -14,10 +14,17 @@ const RotaryTheme = {
   textGold: "text-[#c6a006]"
 };
 
-// --- COMPOSANT : GUIDE INTERVENANT (NOUVEAU) ---
+// --- COMPOSANT : GUIDE INTERVENANT ---
 const AuditorGuide = ({ onBack }) => {
+  // Fonction pour simuler le téléchargement dans cet environnement de démo
+  const handleDownload = (e) => {
+    e.preventDefault();
+    alert("Sur votre site réel (GitHub Pages), ce bouton téléchargera 'Guide_intervenant.pdf'. Ici, c'est une démo !");
+    // Pour la version finale, supprimez ce onClick et utilisez simplement href="Guide_intervenant.pdf"
+  };
+
   return (
-    <div className="bg-gray-50 min-h-screen pb-20">
+    <div className="bg-gray-50 min-h-screen pb-20 animate-in fade-in duration-500">
       {/* Header du Guide */}
       <div className={`${RotaryTheme.royalBlue} text-white sticky top-0 z-50 shadow-md`}>
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -39,10 +46,11 @@ const AuditorGuide = ({ onBack }) => {
               <h1 className={`text-3xl font-black uppercase ${RotaryTheme.textBlue} mb-2`}>Guide d'entretien</h1>
               <p className="text-gray-600 text-lg">Pour les auditeurs - Édition 2026</p>
             </div>
+            
+            {/* NOTE: Sur votre site réel, remplacez le onClick par href="Guide_intervenant.pdf" */}
             <a 
-              href="Guide_intervenant.pdf" 
-              target="_blank"
-              download
+              href="#"
+              onClick={handleDownload}
               className={`flex items-center gap-2 ${RotaryTheme.gold} text-[#00246c] font-bold uppercase px-6 py-3 rounded-sm shadow hover:opacity-90 transition-all`}
             >
               <Download size={20} /> Télécharger le PDF
@@ -202,8 +210,9 @@ const Navigation = ({ onNavigate, onGuideClick }) => {
         <div className="flex justify-between h-24 items-center">
           <div className="flex-shrink-0 flex items-center gap-4 cursor-pointer" onClick={() => onNavigate('home')}>
             <div className="flex items-center justify-center">
+              {/* Logo Rotary International (Source externe/wikimedia) */}
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Rotary_International_Logo.svg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/4/44/Rotary_International_Logo.svg" 
                 alt="Logo Roue Rotary" 
                 className="h-16 w-auto" 
               />
@@ -220,7 +229,6 @@ const Navigation = ({ onNavigate, onGuideClick }) => {
                 key={link.name} 
                 href={link.href}
                 onClick={(e) => {
-                   // Si on clique sur un lien ancre, on s'assure d'être sur la vue 'home'
                    onNavigate('home');
                 }}
                 className={`text-gray-600 hover:text-[#00246c] font-bold text-sm uppercase tracking-wider transition-colors duration-200 py-2 border-b-2 border-transparent hover:border-[#fece09]`}
@@ -228,7 +236,6 @@ const Navigation = ({ onNavigate, onGuideClick }) => {
                 {link.name}
               </a>
             ))}
-            {/* Nouveau Bouton Guide dans le menu */}
             <button 
               onClick={onGuideClick}
               className="flex items-center gap-2 text-[#00246c] font-bold uppercase text-sm hover:text-[#fece09] transition-colors"
@@ -328,6 +335,7 @@ const Hero = ({ onGuideClick }) => {
                 <div className="h-full w-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
              </div>
              <div className="p-12 text-center text-white z-10">
+                {/* Logo Opération 3E (Fichier local) */}
                 <img 
                   src="logo3E.png" 
                   alt="Logo Opération 3E" 
