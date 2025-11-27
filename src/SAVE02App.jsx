@@ -40,26 +40,15 @@ const AuditorGuide = ({ onBack }) => {
               <p className="text-gray-600 text-lg">Pour les auditeurs - Édition 2026</p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-              <a 
-                href="Guide_intervenant.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`flex items-center justify-center gap-2 ${RotaryTheme.gold} text-[#00246c] font-bold uppercase px-6 py-3 rounded-sm shadow hover:opacity-90 transition-all`}
-              >
-                <Download size={20} /> Guide (PDF)
-              </a>
-              <a 
-                href="Grille_entretien.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`flex items-center justify-center gap-2 bg-[#00246c] text-white font-bold uppercase px-6 py-3 rounded-sm shadow hover:opacity-90 transition-all border border-[#00246c]`}
-              >
-                <FileText size={20} /> Grille (PDF)
-              </a>
-            </div>
+            <a 
+              href="Guide_intervenant.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center gap-2 ${RotaryTheme.gold} text-[#00246c] font-bold uppercase px-6 py-3 rounded-sm shadow hover:opacity-90 transition-all`}
+            >
+              <Download size={20} /> Télécharger le PDF
+            </a>
           </div>
           
           <div className="mt-8 prose text-gray-600 leading-relaxed bg-blue-50 p-6 rounded-lg border border-blue-100">
