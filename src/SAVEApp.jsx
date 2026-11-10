@@ -119,7 +119,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="lg:w-1/2 py-20 px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
             <span className={`font-bold tracking-widest uppercase mb-4 ${RotaryTheme.textGold} flex items-center gap-2`}>
-              <span className="h-1 w-8 bg-[#fece09]"></span> Événement 2026
+              <span className="h-1 w-8 bg-[#fece09]"></span> Événement 16 janvier 2027
             </span>
             <h1 className={`text-5xl md:text-6xl font-black ${RotaryTheme.textBlue} leading-tight mb-6 uppercase`}>
               Agir pour <br/>votre avenir
@@ -139,8 +139,8 @@ const Hero = () => {
 
             <div className="mt-12 pt-8 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-3 gap-6">
                <div className="flex flex-col">
-                  <span className={`text-2xl font-black ${RotaryTheme.textBlue}`}>07 FÉV</span>
-                  <span className="text-sm text-gray-500 uppercase font-bold">Samedi 2026</span>
+                  <span className={`text-2xl font-black ${RotaryTheme.textBlue}`}>16 JAN</span>
+                  <span className="text-sm text-gray-500 uppercase font-bold">16 janvier 2027</span>
                </div>
                <div className="flex flex-col">
                   <span className={`text-2xl font-black ${RotaryTheme.textBlue}`}>08h30</span>
@@ -299,7 +299,7 @@ const AuditorSection = () => {
             </div>
             <div className="mt-4 md:mt-0">
                 <span className={`inline-block px-4 py-2 ${RotaryTheme.gold} text-[#00246c] font-bold uppercase text-xs tracking-wider`}>
-                    Guide 2026
+                    Guide 2027
                 </span>
             </div>
         </div>
@@ -404,7 +404,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 uppercase tracking-wider">
-          <p>&copy; 2026 Rotary Club Thionville Saint-Exupéry.</p>
+          <p>&copy; 2027 Rotary Club Thionville Saint-Exupéry.</p>
           <p>Servir pour changer des vies.</p>
         </div>
       </div>
